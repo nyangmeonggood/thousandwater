@@ -1,5 +1,5 @@
 var API_URL = 'http://floating-harbor-78336.herokuapp.com/fastfood'
-
+alert("hi")
 $(function(){
     $('.btn-search').click(function (){
         var searchKeyword = $('#txt-search').val();
