@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basketball</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="basketball.css">
+    <script src="basketball.js"></script>
+</head>
+<body>
+    <div class="div-scoreboard">
+        <div class="div-scoreboard inner">
+            <div class="div-shots-left">
+                <span>남은 슛 횟수</span>
+                <span id="shots-left"></span>
+            </div>
+            <div class="div-score">
+                <div class="div-score-name">알파고</div>
+                <div class="div-score-number" id="computer-score">0</div>
+            </div>
+            <div class="div-score">
+                <div class="div-score-name">세돌</div>
+                <div class="div-score-number" id="ys-score">0</div>
+            </div>
+            <div id="text">알파고부터 시작합니다!</div>
+        </div>
+    </div>
+
+    <div class="div-control-panel">
+        <div id="div-computer" class="div-panel">
+            <div class="div-control-name">알파고</div>
+            <button class="btn-com" onclick="onCshoot()" disabled>슛</button>
+        </div>
+        <div id="div-ys" class="div-panel">
+            <div class="div-control-name">세돌</div>
+            <button class="btn-ys" onclick="onYSshoot(2)" disabled>2점슛</button>
+            <button class="btn-ys" onclick="onYSshoot(3)" disabled>3점슛</button>
+        </div>
+    </div>
+</body>
+</html>

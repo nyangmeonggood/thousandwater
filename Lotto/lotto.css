@@ -1,0 +1,11 @@
+.ball{
+    display: inline-block;
+    width: 60px; height: 60px;
+    line-height: 60px;
+    border-radius: 60px;
+    background: #FC2;
+    color: chocolate;
+    margin:4px;
+    text-align: center;
+    font-weight: bold;
+}
