@@ -26,7 +26,7 @@ function working(a,b,c){
 
 function init(){
     setTime()
-    setInterval(setTime,1000000)
+    setInterval(setTime,1000)
 }
 
 init();
