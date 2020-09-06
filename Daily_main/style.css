@@ -41,6 +41,7 @@ body{background-color: white;}
 /* clock */
 
 .timeline{
+    display: none;
     width: 15vw; height: 0.4vw;
     position: relative;
     background-color: #ddd;
@@ -82,10 +83,12 @@ body{background-color: white;}
 /* hi */
 .js_name{
     text-align: center;
+    margin-bottom: 60px;
 }
 
 .js_name .js_form,
-.js_welcome{display: none;background-color: transparent;}
+.js_welcome,
+.bar{display: none;background-color: transparent;}
 
 .js_name .js_form input{
     width: 100%;
@@ -106,6 +109,26 @@ body{background-color: white;}
     font-size: 0.8vw;
 }
 
+.bar{
+    width: 10%;
+    height: 1px;
+    background-color:black;
+    margin:4px auto;
+    animation: blnk;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blnk{
+    0%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{opacity: 0;}
+}
+
 @media screen and (max-width: 900px) {
     .js_hi{
         font-size: 6vw;
@@ -119,6 +142,19 @@ body{background-color: white;}
 /* //hi */
 
 /* to do */
+.js_toDo{
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.js_toDo .js_form{
+    margin-bottom: 40px;
+}
+.js_toDo .js_form input{
+    border:none
+}
+
 .js_toDoList li{
     position: relative;
     padding-left: 20px;
