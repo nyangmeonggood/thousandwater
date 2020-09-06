@@ -40,6 +40,7 @@ body{background-color: white;}
     background-color: #ddd;
     margin: 0 auto;
     overflow: hidden;
+    border-radius: 30vw;
 }
 .timeline li{background-color: #FC2; height: inherit;width: 0%;}
 
@@ -54,6 +55,21 @@ body{background-color: white;}
 }
 
 .clock span{font-size: 4.5vw;overflow: hidden;display: inline-block;}
+
+@media screen and (max-width: 900px) {
+    .clock h1{
+        font-size: 25vw;
+    }
+    
+    .clock span{
+        font-size: 14.5vw;
+    }    
+
+    .timeline{
+        width: 50vw; height: 1.3vw;
+        border-radius: 10vw;
+    }
+}
 /* //clock */
 
 
@@ -82,5 +98,16 @@ body{background-color: white;}
     padding-bottom: 0.1vw;
     border-bottom: 0.5px solid;
     font-size: 0.8vw;
+}
+
+@media screen and (max-width: 900px) {
+    .js_hi{
+        font-size: 6vw;
+        margin-bottom: 0.1vw;
+    }
+    
+    .js_changeName{
+        font-size: 3vw;
+    }
 }
 /* //hi */
