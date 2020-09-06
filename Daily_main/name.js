@@ -8,12 +8,11 @@ const USERNAME = "userName",
 
 var autoFocusName = true
 window.addEventListener("load", function(event){
-    setInterval(function(){
-        if(autoFocusName){
+    if(autoFocusName){
+        setInterval(function(){
             nameInput.focus()
-            autoFocusName = false;
-        }
-    },500)
+        },500)
+    }
 })
 
 function loadName(){
@@ -36,6 +35,7 @@ function submitName(event){
     const currentUser = nameInput.value;
     rememberName(currentUser);
     showWelcome(currentUser);
+    autoFocusName = false;
 }
 
 function rememberName(text){
