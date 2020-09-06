@@ -32,6 +32,12 @@ body{background-color: white;}
 
 #main>.pos_center{width: 100%;color: #111;}
 
+
+
+@media screen and (max-width: 900px) {
+    #main>.pos_center{top:25%;}
+}
+
 /* clock */
 
 .timeline{
@@ -111,3 +117,22 @@ body{background-color: white;}
     }
 }
 /* //hi */
+
+/* to do */
+.js_toDoList li{
+    position: relative;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.js_toDoList li button{
+    position: absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background: #EA2027;
+    border-radius: 100px;
+    vertical-align: middle;
+    border: none;
+}
+/* //to do */

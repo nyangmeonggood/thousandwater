@@ -6,6 +6,10 @@ const nameForm = document.querySelector(".js_name .js_form"),
 const USERNAME = "userName",
     SHOW_ON = "show"
 
+window.addEventListener("load", function(event){
+    nameInput.focus()
+})
+
 function loadName(){
     const userName = localStorage.getItem(USERNAME)
 
