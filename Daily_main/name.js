@@ -11,6 +11,7 @@ window.addEventListener("load", function(event){
     if(autoFocusName){
         setInterval(function(){
             nameInput.focus()
+            nameInput.click()
         },500)
     }
 })
