@@ -1,6 +1,6 @@
 *{
     margin:0; padding:0;
-    font-family: inherit;
+    font-family: 'noto sans kr';
     font-size:inherit;
     color: inherit;
     letter-spacing: inherit;
@@ -15,19 +15,72 @@ body,html{
     width: 100%; height: 100%;
 }
 
-.pos_center{
-    position: absolute;
-    top: 50%;left: 50%;
-    transform: translate(-50%,-50%);
-}
+body{background-color: white;}
 
 #main{
     width: 100%; height: 100%;
     position: relative;
 }
 
-#main>.pos_center{width: 100%;}
+.pos_center{
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%,-50%);
+}
 
-.clock,form.name{
+.show{display: block !important;}
+
+#main>.pos_center{width: 100%;color: #111;}
+
+/* clock */
+
+.timeline{
+    width: 15vw; height: 0.4vw;
+    position: relative;
+    background-color: #ddd;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.timeline li{background-color: #FC2; height: inherit;width: 0%;}
+
+.clock{
+    text-align: center;
+    letter-spacing: 0.08em;
+}
+
+.clock h1{
+    font-family: 'Rubik', sans-serif;
+    font-size: 7vw;
+}
+
+.clock span{font-size: 4.5vw;overflow: hidden;display: inline-block;}
+/* //clock */
+
+
+/* hi */
+.js_name{
     text-align: center;
 }
+
+.js_name .js_form,
+.js_welcome{display: none;background-color: transparent;}
+
+.js_name .js_form input{
+    width: 100%;
+    border:none;
+    outline: none;
+    background-color: inherit;
+}
+
+.js_hi{
+    font-size: 1.4vw;
+    margin-bottom: 0.1vw;
+}
+
+.js_changeName{
+    color: #aaa;
+    padding-bottom: 0.1vw;
+    border-bottom: 0.5px solid;
+    font-size: 0.8vw;
+}
+/* //hi */

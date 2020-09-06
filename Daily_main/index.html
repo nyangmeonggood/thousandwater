@@ -3,21 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Rubik:wght@500&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <title>Daily_main</title>
 </head>
 <body>
     <section id="main">
         <div class="pos_center">
+            <!-- clock -->
+            <ul class="timeline">
+                <li class="timeline_ing"></li>
+            </ul>
             <div class="js_clock clock">
                 <h1>00<span>:</span>00</h1>
             </div>
             <script src="clock.js"></script>
+            <!-- //clock -->
 
-            <form class="js_form name">
-                <input type="text" placeholder="이름을 입력해주세요!" />
-            </form>
+            <!-- name -->
+            <div class="js_name">
+                <form class="js_form">
+                    <input type="text" placeholder="이름을 입력하신 후 엔터를 눌러주세요" 
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = '이름을 입력하신 후 엔터를 눌러주세요'"/>
+                </form>
+
+                <div class="js_welcome">
+                    <h3 class="js_hi"></h3>
+                    <span class="js_changeName">이름을 바꾸고싶다면?</span>
+                </div>
+            </div>
             <script src="name.js"></script>
+            <!-- //name -->
+
+            <!-- doto list -->
+            <div class="js_toDo">
+                <form class="js_form">
+                    <input type="text" placeholder="오늘의 할 일은?" 
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = '오늘의 할 일은?'"/>
+                </form>
+
+                <ul class="js_toDoList"></ul>
+            </div>
+            <script src="todo.js"></script>
+            <!-- //doto list -->
         </div>
     </section>
 
