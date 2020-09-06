@@ -6,8 +6,14 @@ const nameForm = document.querySelector(".js_name .js_form"),
 const USERNAME = "userName",
     SHOW_ON = "show"
 
+var autoFocusName = true
 window.addEventListener("load", function(event){
-    nameInput.focus()
+    setInterval(function(){
+        if(autoFocusName){
+            nameInput.focus()
+            autoFocusName = false;
+        }
+    },500)
 })
 
 function loadName(){
@@ -46,6 +52,7 @@ function showWelcome(text){
 function changeName(){
     welcome.classList.remove(SHOW_ON);
     localStorage.removeItem(USERNAME);
+    autoFocusName = true;
     whatIsYourName()
 }
 
