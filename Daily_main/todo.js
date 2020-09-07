@@ -4,7 +4,7 @@ const toDoForm = document.querySelector(".js_toDo .js_form"),
 
 const TODOS_LIST = 'toDos';
 
-const toDos = [];
+let toDos = [];
 
 function saveTodos(){
     localStorage.setItem(TODOS_LIST, JSON.stringify(toDos));
@@ -24,7 +24,17 @@ function loadToDos(){
 }
 
 function delToDos(event){
-    console.log(event)
+    const btn = event.target;
+    const del_li = btn.parentNode;
+    toDoList.removeChild(del_li)
+
+    const cleanToDos = toDos.filter(function(toDo){
+        return toDo.id !== del_li.id
+    })
+    //.filter는 array의 모든 아이템을 통해 함수를 실행하고 true인 아이템들로 새로운 array를 만든다.
+    
+    toDos = cleanToDos
+    saveTodos()
 }
 
 function paintToDo(text){
@@ -42,7 +52,7 @@ function paintToDo(text){
 
     const toDoObj = {
         text: text,
-        id : newId
+        id : `todoList${newId}`
     }
 
     toDos.push(toDoObj);

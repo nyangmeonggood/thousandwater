@@ -14,10 +14,10 @@ function setTime(){
         minute < 10 ? `0${minute}` : minute
     }`
 
-    const workEndTime = 18;
-    const workStartTime = 9;
+    const workEndTime = 18*60;
+    const workStartTime = 9*60;
 
-    ingWidth = (hour - workStartTime) / (workEndTime - workStartTime) * 100
+    ingWidth = (hour * 60 + minute - workStartTime) / (workEndTime - workStartTime) * 100
     workTimeLine.style.width = ingWidth + "%";
 }
 
