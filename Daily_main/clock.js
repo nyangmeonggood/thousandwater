@@ -18,7 +18,9 @@ function setTime(){
     const workStartTime = 9*60;
 
     ingWidth = (hour * 60 + minute - workStartTime) / (workEndTime - workStartTime) * 100
+    if(ingWidth>100){ingWidth = 100}
     workTimeLine.style.width = ingWidth + "%";
+    
 }
 
 function init(){

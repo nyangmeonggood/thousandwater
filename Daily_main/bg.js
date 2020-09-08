@@ -1,6 +1,6 @@
 const body = document.querySelector("body")
 
-const IMG_NUMBER = 7;
+const IMG_NUMBER = 6;
 
 function loadImage(imgNumber){
     
@@ -14,6 +14,7 @@ function loadImage(imgNumber){
         bgImage.style.opacity = "1";
         document.querySelector("#main>.pos_center").classList.add("wbg_txt")
         document.querySelector(".js_toDo .js_form input").classList.add("wbg_box")
+        document.querySelector(".js_weather").classList.add("wbg_txt")
     }
 }
 
