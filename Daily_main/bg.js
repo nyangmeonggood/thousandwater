@@ -9,6 +9,7 @@ function loadImage(imgNumber){
     bgImage.classList.add("bg")
     body.prepend(bgImage)
     
+    /*
     if(imgNumber === 6){
         body.style.backgroundColor = "white";
         bgImage.style.opacity = "1";
@@ -16,6 +17,7 @@ function loadImage(imgNumber){
         document.querySelector(".js_toDo .js_form input").classList.add("wbg_box")
         document.querySelector(".js_weather").classList.add("wbg_txt")
     }
+    */
 }
 
 function makeRandom(){
