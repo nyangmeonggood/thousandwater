@@ -17,9 +17,8 @@
             <div class="js_clock clock">
                 <h1>00<span>:</span>00</h1>
             </div>
-            <script src="clock.js"></script>
             <!-- //clock -->
-
+            
             <!-- name -->
             <div class="js_name">
                 <form class="js_form">
@@ -35,25 +34,29 @@
                     <span class="js_changeName">이름을 바꾸고싶다면?</span>
                 </div>
             </div>
-            <script src="name.js"></script>
             <!-- //name -->
-
+            
             <!-- doto list -->
             <div class="js_toDo">
                 <form class="js_form">
-                    <input type="text" placeholder="오늘의 할 일은?" >
+                    <input type="text" placeholder="오늘의 할 일은?" 
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = ''"/>
                 </form>
-
-                <ul class="js_toDoList"></ul>
             </div>
-            <script src="todo.js"></script>
             <!-- //doto list -->
-
-            <!-- bg -->
-            <script src="bg.js"></script>
-            <!-- //bg -->
         </div>
+        
+        <div class="weather">
+            <span class="js_weather"></span>
+        </div>
+        <ul class="js_toDoList"></ul>
     </section>
-
+    
+    <script src="clock.js"></script>
+    <script src="name.js"></script>
+    <script src="bg.js"></script>
+    <script src="todo.js"></script>
+    <script src="weather.js"></script>
 </body>
 </html>

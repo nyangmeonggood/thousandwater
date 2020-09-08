@@ -21,9 +21,6 @@ function setTime(){
     workTimeLine.style.width = ingWidth + "%";
 }
 
-function working(a,b,c){
-}
-
 function init(){
     setTime()
     setInterval(setTime,1000)
