@@ -72,8 +72,41 @@ body{background-color: black;overflow: hidden;}
     height:0.6vw;
 }
 
+.timeline:hover li.remain_time{
+    transform: translateX(-50%) scale(1);
+}
+
 .timeline li.timeline_ing{background-color: #FC2; height: inherit;width: 0%;position: relative;border-radius: inherit;}
-.timeline li.remain_time{position: absolute;bottom: 100%;left: 0;width: 40px;height: 40px;background: black;}
+.timeline li.remain_time{
+    text-align: center;
+    position: absolute;
+    bottom: calc(100% + 16px);left: 0;
+    width: 100%;height: 40px;
+    line-height: 39px;
+    background: #dbdbdb;
+    transform: translateX(-50%) scale(0);
+    transform-origin: bottom;
+    border-radius: 20px;
+    transition: all 0.5s;
+    color: #111;
+}
+.timeline li.remain_time span{
+    font-size: 1.2em;
+    color: #FC2;
+}
+.timeline li.remain_time::before{
+    position: absolute;
+    left: 50%;top: 98%;
+    transform: translateX(-50%);
+    content: "";
+    display: block;
+    width: 0; height: 0;
+    margin: 0 auto;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;    
+    border-top: 10px solid #dbdbdb;
+
+}
 
 .clock{
     text-align: center;
