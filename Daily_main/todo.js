@@ -25,7 +25,8 @@ function loadToDos(){
 
 function delToDos(event){
     const btn = event.target;
-    const del_li = btn.parentNode;
+    const del_li_arrow = btn.parentNode
+    const del_li = del_li_arrow.parentNode;
     toDoList.removeChild(del_li)
 
     const cleanToDos = toDos.filter(function(toDo){
@@ -40,7 +41,9 @@ function delToDos(event){
 function paintToDo(text){
     const add_li = document.createElement("li");
     const del_li = document.createElement("button");
-    del_li.addEventListener("click",delToDos)
+    del_li.innerHTML = `<span class="line line_0"></span><span class="line line_1"></span><span class="line line_2"></span>`
+    const del_li_arrow = del_li.querySelector("span")
+    del_li_arrow.addEventListener("click",delToDos)
     const con_li = document.createElement("span");
     const newId =  toDos.length + 1;
     con_li.innerText = text;
