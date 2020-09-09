@@ -1,0 +1,194 @@
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream-5Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin pos_center{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+           
+
+html,body, #tripAdviser{
+    width: 100%; height: 100%;
+    position: relative;
+    overflow: hidden;
+    font-family: 'S-CoreDream-3Light';
+}
+
+body{
+    background-color: black;
+}
+
+.arrow{
+    position: fixed;
+    width: 100%; height: calc(100% - 50px);
+    top: 50px; left: 0;
+}
+
+#downArrow{
+    span{
+        position: absolute;
+        left: 50%; bottom: 40px;
+        transform: translateX(-50%) rotate(-45deg) skew(10deg, 10deg);
+        display: block;
+        width: 20px; height: 20px;
+        border-left: 2px solid white;
+        border-bottom: 2px solid white;
+
+        animation : {
+            name: moveDown;
+            duration: 1s;
+            timing-function: linear;
+            iteration-count: infinite;
+        }
+    }
+}
+
+#bg{
+    position: absolute;
+    min-width: 100%; min-height: 100%;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 0;
+    opacity: 0.7;
+
+    animation : {
+        name: fadeIn;
+        duration: 0.5s;
+        timing-function: linear;
+    }
+}
+
+/*  header  */
+
+#header{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 50px;
+    line-height: 50px;
+    color: white;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 0 30px;
+    box-sizing: border-box;
+
+    .menu-items{
+
+        &.left{float: left;}
+        &.right{
+            float: right;
+        
+            a{
+                margin:0 5px;
+            }
+        }
+    }
+}
+
+/* //header */
+
+/*  greeting  */
+
+#greeting{
+    @include pos_center;
+
+    width: 100%;
+    text-align: center;
+    color: white;
+    transition: top 0.5s ease-out;
+
+    h1{
+        font-size: 3vw;
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 1.3vw;
+    }
+
+    &.active{
+        top: 30%;
+    }
+}
+
+/* //greeting */
+
+/*  searchPanel */
+#search-panel{
+    @include pos_center;
+    top: 150%;
+    transform: translateX(-50%);
+    transition: top 0.5s ease-out;
+
+    width: 90%; max-width: 1000px;
+    background-color: white;
+    padding: 100px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    text-align: center;
+
+    &.active{
+        top: 50%;
+    }
+
+    #form-search{
+
+        .panel-block{
+            display: inline-block;
+
+            label{
+                margin-bottom: 10px;
+                display: block;
+            }
+
+            &.date{
+                width: 205px;
+
+                input{
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    border-bottom: 1px solid #111;
+                    cursor: pointer;
+                }
+            }
+
+            &.search{
+                vertical-align: bottom;
+                background:#34495e;
+                margin-left: 40px;
+                border-radius: 10px;
+                color: white;
+                font-family: 'S-CoreDream-5Medium';
+
+                img{
+                    vertical-align: middle;
+                }
+            }
+
+            input, &.search{
+                padding: 10px 16px;
+            }
+        }
+    }
+
+}
+
+/* //searchPanel */
+
+/* calendar */
+#ui-datepicker-div{
+    width: 205px;
+    box-sizing: border-box;
+}
