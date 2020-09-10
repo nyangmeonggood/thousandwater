@@ -16,7 +16,6 @@
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
 }
-           
 
 html,body, #tripAdviser{
     width: 100%; height: 100%;
@@ -118,6 +117,11 @@ body{
     &.active{
         top: 30%;
     }
+
+    &.fade{
+        top: -120%;
+        transition: top 1s ease-out;
+    }
 }
 
 /* //greeting */
@@ -140,6 +144,11 @@ body{
 
     &.active{
         top: 50%;
+    }
+
+    &.fade{
+        top: -100%;
+        transition: top 1.2s ease-out;
     }
 
     #form-search{
@@ -187,8 +196,88 @@ body{
 
 /* //searchPanel */
 
+
+/* spot_list */
+
+#spot_list{
+    display: flex;
+    position: absolute;
+    top: 100%; left: 50%;
+    width: 90%;
+    max-width: 1000px;
+    height: calc(100% - 180px);
+    transform: translateX(-50%);
+    background-color: white;
+    box-sizing: border-box;
+    padding: 70px 40px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    justify-content: left;
+    overflow-y: scroll;
+    transition: top 0.8s;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &.active{
+        top:90px
+    }
+
+    .list-item{
+        width: 33.33%;
+        padding: 0 10px;
+        box-sizing: border-box;
+        margin-bottom: 40px;
+
+        @media screen and (max-width:900px){
+            width:100%;
+            padding: 0;
+        }
+
+        >li:first-child{
+            margin-bottom: 14px;
+            overflow: hidden;
+        }
+
+        .list_item_pic{
+            display: block;
+            width: 100%; height: 100%;
+        }
+
+        .list_item_desc{
+            .list_item_name{
+                display: block;
+                margin-bottom: 8px;
+                font-weight: bolder;
+                font-size: 1.5vw;
+            }
+            .list_item_city{
+                img{vertical-align: bottom;}
+                .list_item_city_name{
+                    font-size: 1.2vw;
+                }
+            }
+        }
+    }
+}
+
+/* //spot_list */
+
+
 /* calendar */
 #ui-datepicker-div{
     width: 205px;
     box-sizing: border-box;
+}
+
+#list_item-template{
+    display: none;
 }
