@@ -176,27 +176,32 @@ body {
     width: 33.33%;
     padding: 0 10px;
     box-sizing: border-box;
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    cursor: pointer; }
     @media screen and (max-width: 900px) {
       #spot_list .list-item {
         width: 100%;
         padding: 0; } }
     #spot_list .list-item > li:first-child {
       margin-bottom: 14px;
-      overflow: hidden; }
+      overflow: hidden;
+      border-radius: 10px; }
     #spot_list .list-item .list_item_pic {
       display: block;
       width: 100%;
       height: 100%; }
+      #spot_list .list-item .list_item_pic:hover {
+        opacity: 0.8;
+        transition: opacity 0.3s ease-in-out; }
     #spot_list .list-item .list_item_desc .list_item_name {
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       font-weight: bolder;
-      font-size: 1.5vw; }
+      font-size: 1.1vw; }
     #spot_list .list-item .list_item_desc .list_item_city img {
       vertical-align: bottom; }
     #spot_list .list-item .list_item_desc .list_item_city .list_item_city_name {
-      font-size: 1.2vw; }
+      font-size: 0.8vw; }
 
 /* //spot_list */
 /* calendar */
