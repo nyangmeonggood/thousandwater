@@ -29,3 +29,9 @@ list_box.addEventListener('wheel', function(event){
         searchPanel.classList.remove("fade");
     }
 })
+
+down_arrow.querySelector("span").addEventListener('click',function(){    
+    greeting.classList.add("active")
+    searchPanel.classList.add("active")
+    down_arrow.style.display = "none"
+})

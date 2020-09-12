@@ -17,6 +17,7 @@ $(function(){
             dpTo.datepicker('setDate',"")
         }
     });
+
     dpFrom.datepicker('setDate',new Date())
 
     var dpTo = $('#to').datepicker();
@@ -37,6 +38,17 @@ $(function(){
         setTimeout(function(){
             imgSize()
         },500)
+
+        var $closeBtn = document.createElement("div")
+        $closeBtn.classList.add("closeBtn")
+        document.querySelector("#spot_list").appendChild($closeBtn)
+        $(".closeBtn").html(`<span class="line1"></span><span class="line2"></span>`)
+        
+        $closeBtn.addEventListener('click',function(){    
+            list_box.classList.remove("active");
+            greeting.classList.remove("fade");
+            searchPanel.classList.remove("fade");
+        })
     })    
 
 

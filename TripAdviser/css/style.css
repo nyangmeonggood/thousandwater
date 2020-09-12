@@ -94,6 +94,11 @@ body {
   #greeting.fade {
     top: -120%;
     transition: top 1s ease-out; }
+  @media screen and (max-width: 900px) {
+    #greeting h1 {
+      font-size: 8vw; }
+    #greeting p {
+      font-size: 3.8vw; } }
 
 /* //greeting */
 /*  searchPanel */
@@ -143,6 +148,20 @@ body {
         vertical-align: middle; }
     #search-panel #form-search .panel-block input, #search-panel #form-search .panel-block.search {
       padding: 10px 16px; }
+  @media screen and (max-width: 900px) {
+    #search-panel {
+      padding: 40px 20px;
+      width: 90%;
+      margin: 0 auto; }
+      #search-panel #form-search {
+        width: 100%; }
+        #search-panel #form-search .panel-block.date {
+          width: 100%;
+          margin-bottom: 30px; }
+        #search-panel #form-search .panel-block.search {
+          margin-left: 0; }
+        #search-panel #form-search .panel-block label {
+          margin-bottom: 4px; } }
 
 /* //searchPanel */
 /* spot_list */
@@ -172,6 +191,30 @@ body {
     background-color: transparent; }
   #spot_list.active {
     top: 90px; }
+  @media screen and (max-width: 900px) {
+    #spot_list .closeBtn {
+      width: 34px;
+      height: 34px;
+      border-radius: 30px;
+      background: #34495e;
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer; }
+      #spot_list .closeBtn span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 18px;
+        height: 2px;
+        background-color: white; }
+        #spot_list .closeBtn span.line1 {
+          transform: translate(-50%, -50%) rotate(45deg); }
+        #spot_list .closeBtn span.line2 {
+          transform: translate(-50%, -50%) rotate(-45deg); } }
   #spot_list .list-item {
     width: 33.33%;
     padding: 0 10px;
@@ -202,12 +245,37 @@ body {
       vertical-align: bottom; }
     #spot_list .list-item .list_item_desc .list_item_city .list_item_city_name {
       font-size: 0.8vw; }
+    @media screen and (max-width: 900px) {
+      #spot_list .list-item .list_item_desc .list_item_name {
+        font-size: 4.5vw; }
+      #spot_list .list-item .list_item_desc .list_item_city .list_item_city_name {
+        font-size: 3.5vw; } }
 
 /* //spot_list */
 /* calendar */
+#datepicker-bg {
+  display: none; }
+  @media screen and (max-width: 900px) {
+    #datepicker-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100%; }
+      #datepicker-bg.active {
+        display: block; } }
+
 #ui-datepicker-div {
   width: 205px;
   box-sizing: border-box; }
+  @media screen and (max-width: 900px) {
+    #ui-datepicker-div {
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%);
+      width: 90% !important;
+      height: auto; } }
 
 #list_item-template {
   display: none; }

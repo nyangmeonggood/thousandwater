@@ -60,6 +60,17 @@ html,body, #tripAdviser{
     width: 70%;
     color: white;
 
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
     .detailHeader{
         display: flex;
         justify-content: space-between;
@@ -90,6 +101,25 @@ html,body, #tripAdviser{
         font-size: 14px;
         letter-spacing: 0.02em;
         line-height: 1.4em;
+    }
+    
+    @media screen and (max-width:900px){
+        top: 90px;
+        width: 85%;
+        height: calc(100% - 90px);
+        overflow: scroll;
+        transform: translateX(-50%);
+
+        .detailHeader{
+            display: block;
+            margin-bottom: 30px;
+
+            li{
+                &:first-child{
+                    margin-bottom: 10px;
+                }
+            }
+        }
     }
 }
 

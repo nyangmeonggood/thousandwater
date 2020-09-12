@@ -44,6 +44,13 @@ html, body, #tripAdviser {
   transform: translate(-50%, -50%);
   width: 70%;
   color: white; }
+  #detailContainer::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent; }
+  #detailContainer::-webkit-scrollbar-thumb {
+    background-color: transparent; }
+  #detailContainer::-webkit-scrollbar-track {
+    background-color: transparent; }
   #detailContainer .detailHeader {
     display: flex;
     justify-content: space-between;
@@ -64,6 +71,18 @@ html, body, #tripAdviser {
     font-size: 14px;
     letter-spacing: 0.02em;
     line-height: 1.4em; }
+  @media screen and (max-width: 900px) {
+    #detailContainer {
+      top: 90px;
+      width: 85%;
+      height: calc(100% - 90px);
+      overflow: scroll;
+      transform: translateX(-50%); }
+      #detailContainer .detailHeader {
+        display: block;
+        margin-bottom: 30px; }
+        #detailContainer .detailHeader li:first-child {
+          margin-bottom: 10px; } }
 
 #detailImage {
   position: absolute;
